@@ -68,7 +68,7 @@ class BackgroundNotification(
 
     private fun updateChannel(channelName: String) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val notificationManager = NotificationManagerCompat.from(applicationContext)
+            val notificationManager = NotificationManagerCompat.from(getApplicationContext())
             val channel = NotificationChannel(
                 channelId,
                 channelName,
