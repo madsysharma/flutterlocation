@@ -106,7 +106,7 @@ class BackgroundNotification(
         }
 
         if (notify) {
-            val notificationManager = NotificationManagerCompat.from(applicationContext)
+            val notificationManager = NotificationManagerCompat.from(getApplicationContext())
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU || ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED){
                 notificationManager.notify(notificationId, builder.build())
             } 
